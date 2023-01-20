@@ -1,11 +1,11 @@
 import * as cdk from 'aws-cdk-lib';
 import { Template, Match } from 'aws-cdk-lib/assertions';
-import * as Twitter from '../lib/twitter-stack';
+import * as Invoicing from '../lib/invoicing-stack';
 
 test('SQS Queue and SNS Topic Created', () => {
   const app = new cdk.App();
   // WHEN
-  const stack = new Twitter.TwitterStack(app, 'MyTestStack');
+  const stack = new Invoicing.InvoicingStack(app, 'MyTestStack');
   // THEN
 
   const template = Template.fromStack(stack);
